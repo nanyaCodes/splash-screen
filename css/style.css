@@ -1,0 +1,83 @@
+/* Custom fonts */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+@keyframes pulse-gentle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.95;
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    transform: scale(1.5);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 8s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 7s ease-in-out infinite;
+}
+
+@keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes float-delayed {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .animate-float-delayed { animation: float-delayed 3s ease-in-out infinite 1s; }
+        .animate-float-slow { animation: float-slow 4s ease-in-out infinite; }
+        
+        /* Transition animations */
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .fade-in {
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .bg-cream { background-color: #F5F5DC; }
+        .bg-gold { background-color: #FFD700; }
+        
+        #mainContent {
+          opacity: 0;
+        }
+        
+        #mainContent.fade-in {
+            opacity: 1;
+        }
+
